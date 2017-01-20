@@ -36,4 +36,4 @@ for node in stig_doc.getElementsByTagName("Group"):
 with open("stig.json","w") as f:
     json.dump(mapping,f)
 
-#print(mapping)
+print(mapping)

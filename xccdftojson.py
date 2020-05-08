@@ -1,9 +1,10 @@
-#!/bin/python
+#!/usr/bin/python
 
 import os
 import xml.dom.minidom
 import json
 import sys
+import pprint
 
 
 #stig_doc = xml.dom.minidom.parse("U_Red_Hat_Enterprise_Linux_7_STIG_V1R0-2_Manual-xccdf.xml")
@@ -77,4 +78,4 @@ for node in stig_doc.getElementsByTagName("Group"):
 with open(sys.argv[1].replace('xml', 'json'),"w") as f:
     json.dump(mapping,f)
 
-print(mapping)
+pprint.pprint(mapping)
